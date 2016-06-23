@@ -4,6 +4,9 @@ Authentication middleware for JWT auth in Flask and Django apps
 ![edison architecture](/edison_architecture.png "edison architecture")
 
 
+Usage
+_____
+
 # Django Integration
 
 ## settings.py
@@ -32,3 +35,7 @@ EDISON_JWT_AUTHENTICATION_HEADER = 'TOKEN'
     def only_auth_users():
       return render_template('only_auth_users.html')
 ```
+
+# Join me make JWT even more awesome!
+_____________________________________
+:beer:
