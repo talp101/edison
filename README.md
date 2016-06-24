@@ -15,10 +15,14 @@ _____
 MIDDLEWARE_CLASSES = [
   'django.middleware.security.SecurityMiddleware',
   ...
-  'edison.middleware.django.JWTAuthenticationMiddleware'
+  'edison.middlewares.jwt_authentication_middleware.JWTAuthenticationMiddleware'
 ]
 
-EDISON_JWT_AUTHENTICATION_HEADER = 'TOKEN'
+EDISON = {
+    'JWT_AUTHENTICATION_HEADER': 'TOKEN',
+    'JWT_VALIDATOR_URL': 'http://localhost:3000/jwt_verify',
+    'JWT_FAILED_REDIRECT_URL': 'http://google.com'
+}
 ```
 
 ### Flask Integration
